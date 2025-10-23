@@ -31,7 +31,7 @@ html {
 		flex-direction: column;
 		background-color: var(--color-dark-green);
 		padding: 0 50px 30px;
-        gap: 20px;
+		gap: 20px;
 
 		.header {
 			display: flex;
@@ -44,7 +44,8 @@ html {
 			position: fixed;
 			margin-bottom: 100px;
 			border-radius: 5px;
-            /* box-shadow: 0 0 0 0 var(--color-grey); */
+			backdrop-filter: blur(2px);
+			/* box-shadow: 0 0 0 0 var(--color-grey); */
 
 			font-family: "Raleway", sans-serif;
 			font-optical-sizing: auto;
@@ -164,6 +165,7 @@ html {
 				button {
 					padding: 6px 9px;
 					color: var(--color-light-green);
+					background-color: var(--color-white);
 					font-size: 12px;
 					font-weight: 600;
 					border: 1.5px solid var(--color-light-green);
@@ -176,11 +178,11 @@ html {
 
 					&:hover {
 						scale: 1.1;
-						color: var(--color-grey);
+						color: var(--color-white);
 						background-color: var(--color-light-green);
 
 						.icon {
-							fill: var(--color-grey);
+							fill: var(--color-white);
 						}
 					}
 
@@ -198,7 +200,79 @@ html {
 			width: 100%;
 			gap: 15px;
 			padding: 30px 50px;
-			background-color: var(--color-grey);
+			/* background-color: var(--color-grey); */
+			color: var(--color-dark-green);
+		}
+	}
+
+	.section_three {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 30px 0 30px 50px;
+		background-color: var(--color-dark-green);
+
+		.projects {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 15px;
+
+			.project {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				width: 100%;
+
+				.each {
+					display: flex;
+					flex-direction: column;
+					gap: 4px;
+					/* border: 1px solid var(--color-grey); */
+					/* border-radius: 4px; */
+					width: 45%;
+
+					.image {
+						width: 100%;
+					}
+					.title {
+						font-size: 0.9em;
+					}
+					.desc {
+						font-size: 0.7em;
+					}
+					.buttons {
+						display: flex;
+						gap: 7px;
+						font-size: 0.7em;
+
+						& * {
+							transition: all 0.3s;
+
+							&:hover {
+								scale: 1.1;
+								color: var(--color-grey);
+								background-color: var(--color-light-green);
+							}
+						}
+
+						.live_demo {
+							list-style: none;
+							text-decoration: none;
+							background-color: var(--color-light-green);
+							padding: 5px 10px;
+							border-radius: 4px;
+						}
+						.source_code {
+							list-style: none;
+							text-decoration: none;
+							background-color: var(--color-light-green);
+							padding: 5px 7px;
+							border-radius: 4px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

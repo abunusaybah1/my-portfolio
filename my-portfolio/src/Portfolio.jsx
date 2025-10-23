@@ -15,6 +15,8 @@ const Portfolio = () => {
 			</div>
 			<div className="section_two">
 				<Skills />
+			</div>
+			<div className="section_three">
 				<Projects />
 			</div>
 		</div>
