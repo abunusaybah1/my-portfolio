@@ -6,9 +6,10 @@ import {
 	DiReact,
 	DiGit,
 	DiGithub,
+	DiWordpress,
 } from "react-icons/di";
-
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { GiTeacher } from "react-icons/gi";
 
 const Skills = () => {
 	return (
@@ -38,6 +39,12 @@ const Skills = () => {
 				</button>
 				<button>
 					<DiGithub className="icon" /> Github
+				</button>
+				<button>
+					<DiWordpress className="icon" /> Wordpress
+				</button>
+				<button>
+					<GiTeacher className="icon" /> Tutoring
 				</button>
 			</div>
 		</div>

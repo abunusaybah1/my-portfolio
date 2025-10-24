@@ -8,12 +8,12 @@
 		"source_code": "https://facebook.com"
 	},
 	{
-		"id": "1",
-		"image": "../src/assets/portfolio_image.png",
-		"title": "Portfolio",
-		"desc": "Sample portfolio",
-		"live_demo": "https://google.com",
-		"source_code": "https://facebook.com"
+		"id": "2",
+		"image": "../src/assets/almattech_academy.png",
+		"title": "Almattech Academy",
+		"desc": "Wordpress E-learning platform",
+		"live_demo": "https://academy.almattech.com.ng",
+		"source_code": "https://academy.almattech.com.ng"
 	},
 	{
 		"id": "1",
