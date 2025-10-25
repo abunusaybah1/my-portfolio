@@ -17,7 +17,7 @@
 	font-family: var(--font-raleway);
 }
 
-html {
+body {
 }
 
 .portfolio {
@@ -37,11 +37,50 @@ html {
 		margin-bottom: 100px;
 		border-radius: 5px;
 		backdrop-filter: blur(2px);
-		/* box-shadow: 0 0 0 0 var(--color-grey); */
 
-		font-family: "Raleway", sans-serif;
-		font-optical-sizing: auto;
-		font-style: normal;
+		background: rgba(41, 99, 35, 0.25);
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		border: 1px solid rgba(41, 99, 35, 0.4);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+			inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+		overflow: hidden;
+		color: var(--color-grey);
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: scale(1.03);
+			box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+				inset 0 0 40px 20px rgba(41, 99, 35, 0.15);
+			border-color: rgba(41, 99, 35, 0.6);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(
+				90deg,
+				transparent,
+				rgba(255, 255, 255, 0.5),
+				rgba(41, 99, 35, 0.5)
+			);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 0.6),
+				rgba(41, 99, 35, 0.2),
+				transparent
+			);
+		}
 
 		.name {
 			/* font-size: 15px; */
@@ -220,9 +259,9 @@ html {
 			.project {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 15px;
+				gap: 30px;
 				width: 100%;
-				justify-content: space-between;
+				justify-content: center;
 
 				.each {
 					display: flex;
@@ -232,11 +271,19 @@ html {
 					background-color: var(--color-grey);
 					/* border: 1px solid var(--color-grey); */
 					border-radius: 4px;
-					width: 47%;
+					padding: 0 0 5px;
+					width: 80%;
+					box-shadow: 1px 1px 15px 5px rgba(41, 99, 35, 0.6);
+					transition: all 0.3s;
+
+					&:hover {
+						scale: 1.02;
+					}
+					
 
 					.image {
 						width: 100%;
-						border-radius: 0 0 4px 4px;
+						border-radius: 4px 4px 0 0;
 						/* border: 1px solid var(--color-grey); */
 					}
 
@@ -244,20 +291,20 @@ html {
 						display: flex;
 						flex-direction: column;
 						gap: 6px;
-						padding: 5px;
+						padding: 10px;
 
 						.title {
-							font-size: 0.8em;
+							font-size: 0.95em;
 							color: var(--color-light-green);
 						}
 						.desc {
-							font-size: 0.65em;
+							font-size: 0.85em;
 							color: var(--color-light-green);
 						}
 						.buttons {
 							display: flex;
 							gap: 7px;
-							font-size: 0.6em;
+							font-size: 0.8em;
 
 							& * {
 								transition: all 0.3s;
@@ -291,7 +338,7 @@ html {
 			button {
 				display: flex;
 				gap: 5px;
-				width: 100%;
+				width: 70%;
 				padding: 5px 20px;
 				border-radius: 3px;
 				border: none;
